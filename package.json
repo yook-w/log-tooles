@@ -2,7 +2,7 @@
   "name": "log-tooles",
   "publisher": "yook-w",
   "displayName": "log-tooles 工具集",
-  "version": "0.0.4",
+  "version": "0.0.6",
   "icon": "icon.png",
   "engines": {
     "vscode": "^1.85.0"
@@ -10,21 +10,51 @@
   "categories": [
     "Other"
   ],
-  "activationEvents": [
-    "onCommand:extension.logSelectedText"
-  ],
+  "activationEvents": [],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [{
-      "command": "extension.logSelectedText",
-      "title": "Log Selected Text"
-    }],
+        "command": "extension.logSelectedText",
+        "title": "Log Selected Text"
+      },
+      {
+        "command": "extension.logSearchText",
+        "title": "Log Search Text"
+      }
+    ],
     "keybindings": [{
-      "command": "extension.logSelectedText",
-      "key": "ctrl+shift+L",
-      "mac": "cmd+shift+L",
-      "when": "editorTextFocus"
-    }]
+        "command": "extension.logSelectedText",
+        "key": "ctrl+shift+L",
+        "mac": "cmd+shift+L",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "extension.logSearchText",
+        "key": "ctrl+shift+B",
+        "mac": "cmd+shift+B",
+        "when": "editorTextFocus"
+      }
+    ],
+    "configuration": {
+      "title": "Log Search Text",
+      "properties": {
+        "logSearchText.searchEngines": {
+          "type": "object",
+          "description": "为日志搜索文本扩展配置搜索引擎\nConfigure search engines for Log Search Text extension.",
+          "default": {
+            "Google": "https://www.google.com/search?q=",
+            "Bing": "https://www.bing.com/search?q=",
+            "Baidu": "https://www.baidu.com/s?wd="
+          }
+        },
+        "logSearchText.selectedSearchEngine": {
+          "type": "string",
+          "description": "选择默认搜索引擎区搜索选中内容。\nSelect the default search engine for Log Search Text extension.",
+          "default": "Baidu",
+          "enum": ["Google", "Bing", "Baidu"]
+        }
+      }
+    }
   },
   "scripts": {
     "vscode:prepublish": "pnpm run compile",
