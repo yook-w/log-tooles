@@ -10,6 +10,7 @@
   "categories": [
     "Other"
   ],
+  "repository": "https://github.com/yook-w/log-tooles.git",
   "activationEvents": [],
   "main": "./out/extension.js",
   "contributes": {
