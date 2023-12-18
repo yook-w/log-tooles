@@ -2,7 +2,7 @@
   "name": "log-tooles",
   "publisher": "yook-w",
   "displayName": "log-tooles 工具集",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "icon": "images/icon.png",
   "engines": {
     "vscode": "^1.85.0"
@@ -10,7 +10,10 @@
   "categories": [
     "Other"
   ],
-  "repository": "https://github.com/yook-w/log-tooles.git",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yook-w/log-tooles.git"
+  },
   "activationEvents": [],
   "main": "./out/extension.js",
   "contributes": {

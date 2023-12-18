@@ -12,4 +12,4 @@
 
 #### 搜索log配置： 
 >默认使用Baidu搜素引擎，若您希望使用其他,插件也支持Google或者Bing为默认搜索引擎。可在setting.json中修改默认值。
-![Alt text](images/image.png)
+![Alt text](https://github.com/yook-w/log-tooles/tree/main/images/image.png)
