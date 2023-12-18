@@ -2,7 +2,7 @@
   "name": "log-tooles",
   "publisher": "yook-w",
   "displayName": "log-tooles 工具集",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "icon": "images/icon.png",
   "engines": {
     "vscode": "^1.85.0"
