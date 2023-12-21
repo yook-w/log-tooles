@@ -2,7 +2,7 @@
   "name": "log-tooles",
   "publisher": "yook-w",
   "displayName": "log-tooles 工具集",
-  "version": "0.0.11",
+  "version": "0.1.0",
   "icon": "images/icon.png",
   "engines": {
     "vscode": "^1.85.0"
@@ -17,19 +17,31 @@
   "activationEvents": [],
   "main": "./out/extension.js",
   "contributes": {
-    "commands": [{
+    "commands": [
+      {
         "command": "extension.logSelectedText",
         "title": "Log Selected Text"
+      },
+      {
+        "command": "extension.logDeleteText",
+        "title": "Log Delete Text"
       },
       {
         "command": "extension.logSearchText",
         "title": "Log Search Text"
       }
     ],
-    "keybindings": [{
+    "keybindings": [
+      {
         "command": "extension.logSelectedText",
         "key": "ctrl+shift+L",
         "mac": "cmd+shift+L",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "extension.logDeleteText",
+        "key": "ctrl+shift+D",
+        "mac": "cmd+shift+D",
         "when": "editorTextFocus"
       },
       {
@@ -55,7 +67,11 @@
           "type": "string",
           "description": "选择默认搜索引擎区搜索选中内容。\nSelect the default search engine for Log Search Text extension.",
           "default": "Baidu",
-          "enum": ["Google", "Bing", "Baidu"]
+          "enum": [
+            "Google",
+            "Bing",
+            "Baidu"
+          ]
         }
       }
     }
